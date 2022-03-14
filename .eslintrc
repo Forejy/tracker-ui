@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "max-len": ["error", {"ignoreComments": true}],
+    "no-unused-vars": "off"
+  }
+}
