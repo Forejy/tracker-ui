@@ -1,0 +1,10 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+		"import/extensions": [ "error", "always", { "ignorePackages": true } ], // Toujours demander l'extension avec un import sauf si c'est un package
+    "react/prop-types": "off" //Ne dira pas quand les composants manquent de validation pour leurs props juste pour pas que ça dérange tant qu'on prend autant au serieux notre app
+  }
+}

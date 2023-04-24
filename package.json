@@ -1,0 +1,75 @@
+{
+  "name": "pro-mern-stack-ex2",
+  "version": "1.0.0",
+  "description": "Installation pour un projet avec la MERN stack",
+  "main": "index.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "#start": "UI server. Webpack with HMR is enabled in dev mode",
+    "start": "node dist/server.js",
+    "#lint": "Runs ESLint on all elevant files",
+    "lint": "eslint server src browser --ext js,jsx",
+    "#compile": "Generates JS bundles for production. Use with start.",
+    "compile": "webpack --mode production",
+    "#watch-server-hmr": "Recompile server HMR bundle on changes.",
+    "watch-server-hmr": "webpack -w --config webpack.serverHMR.js",
+    "#dev-all": "Dev mode: watch for server changes and start UI server",
+    "dev-all": "rm dist/* && npm run watch-server-hmr & sleep 5 && npm start",
+    "heroku-postbuild": "npm run compile && ln -fs ../node_modules/bootstrap/dist public/boostrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Dans le dossier parent"
+  },
+  "keywords": [
+    "Installation",
+    "d'un",
+    "projet",
+    "avec",
+    "la",
+    "MERN",
+    "stack"
+  ],
+  "author": "Forejy",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.4.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.2",
+    "http-proxy-middleware": "^0.21.0",
+    "isomorphic-fetch": "^2.2.1",
+    "nodemon": "^1.19.4",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-bootstrap": "^0.33.1",
+    "react-dom": "^16.14.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^4.3.1",
+    "react-select": "^2.4.4",
+    "serialize-javascript": "^1.9.1",
+    "source-map-support": "^0.5.21",
+    "url-search-params": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.3",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
